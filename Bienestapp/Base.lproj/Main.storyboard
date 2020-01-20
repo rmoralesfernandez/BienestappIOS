@@ -101,8 +101,8 @@
                                 <color key="textColor" red="0.11532783990000001" green="0.85815368670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pw9-jW-F8D">
-                                <rect key="frame" x="157" y="169" width="101" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recuperar contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pw9-jW-F8D">
+                                <rect key="frame" x="85" y="169" width="246" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.40155049209999999" blue="0.28186085859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -121,7 +121,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="Enviar"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="pnb-0q-1GR"/>
+                                    <action selector="recoverPassword:" destination="gKT-MZ-nvC" eventType="touchUpInside" id="8ct-vg-FeE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -204,7 +204,4 @@
             <point key="canvasLocation" x="949" y="139"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="9OZ-QP-Qh9"/>
-    </inferredMetricsTieBreakers>
 </document>
