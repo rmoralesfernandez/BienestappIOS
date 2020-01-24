@@ -12,7 +12,6 @@ class LoginController: UIViewController {
 
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,9 +36,18 @@ class LoginController: UIViewController {
         print(json)
         Alamofire.request(url!, method: .post, parameters: json, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
             print(response)
+            if response.response!.statusCode == 201 {
+                self.performSegue(withIdentifier: "CorrectLogin", sender: nil)
+            } else {
+                let alert1 = UIAlertAction(title:"Cerrar", style: UIAlertAction.Style.default) {
+                    (error) in
+                }
+                let alert = UIAlertController(title: "Error", message:
+                    "Informacion Incorrecta", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(alert1)
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
-
-
 }
 
