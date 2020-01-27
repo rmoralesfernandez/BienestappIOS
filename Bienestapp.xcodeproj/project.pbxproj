@@ -16,6 +16,7 @@
 		7F24133F23D0586400B5F10F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24133E23D0586400B5F10F /* RegisterController.swift */; };
 		7F24134123D05EBF00B5F10F /* RecoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24134023D05EBF00B5F10F /* RecoverController.swift */; };
 		7F24134323D0632900B5F10F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24134223D0632900B5F10F /* User.swift */; };
+		7FB574CA23DF01F400BC6DE2 /* tableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB574C923DF01F400BC6DE2 /* tableCell.swift */; };
 		7FB6B57623D9C4F80021D932 /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6B57523D9C4F80021D932 /* StatsController.swift */; };
 		7FB6B57823D9C5640021D932 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6B57723D9C5640021D932 /* MapController.swift */; };
 		7FB6B57A23D9C5A60021D932 /* Restrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6B57923D9C5A60021D932 /* Restrict.swift */; };
@@ -35,6 +36,7 @@
 		7F24133E23D0586400B5F10F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		7F24134023D05EBF00B5F10F /* RecoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverController.swift; sourceTree = "<group>"; };
 		7F24134223D0632900B5F10F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7FB574C923DF01F400BC6DE2 /* tableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableCell.swift; sourceTree = "<group>"; };
 		7FB6B57523D9C4F80021D932 /* StatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
 		7FB6B57723D9C5640021D932 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		7FB6B57923D9C5A60021D932 /* Restrict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restrict.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				7F24132C23D057AD00B5F10F /* AppDelegate.swift */,
 				7F24132E23D057AD00B5F10F /* LoginController.swift */,
 				7F24133023D057AD00B5F10F /* Main.storyboard */,
+				7FB574C923DF01F400BC6DE2 /* tableCell.swift */,
 				7F24134223D0632900B5F10F /* User.swift */,
 				7F24134023D05EBF00B5F10F /* RecoverController.swift */,
 				7F24133E23D0586400B5F10F /* RegisterController.swift */,
@@ -232,6 +235,7 @@
 				7F24134323D0632900B5F10F /* User.swift in Sources */,
 				7FB6B57623D9C4F80021D932 /* StatsController.swift in Sources */,
 				7F24133F23D0586400B5F10F /* RegisterController.swift in Sources */,
+				7FB574CA23DF01F400BC6DE2 /* tableCell.swift in Sources */,
 				7FD206CB23D5AFC10026D059 /* AppsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

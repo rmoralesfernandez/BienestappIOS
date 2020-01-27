@@ -7,6 +7,7 @@
 //
 import Alamofire
 import UIKit
+var token: String = ""
 
 class LoginController: UIViewController {
 
@@ -38,6 +39,10 @@ class LoginController: UIViewController {
             print(response)
             if response.response!.statusCode == 201 {
                 self.performSegue(withIdentifier: "CorrectLogin", sender: nil)
+                var json = response.result.value as! [String: AnyObject]
+                print(json)
+                token = json["token"] as! String
+                print(token)
             } else {
                 let alert1 = UIAlertAction(title:"Cerrar", style: UIAlertAction.Style.default) {
                     (error) in
