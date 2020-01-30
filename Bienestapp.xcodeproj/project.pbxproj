@@ -17,6 +17,7 @@
 		7F24134123D05EBF00B5F10F /* RecoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24134023D05EBF00B5F10F /* RecoverController.swift */; };
 		7F24134323D0632900B5F10F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24134223D0632900B5F10F /* User.swift */; };
 		7F754B9823E04CC1000F390F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F754B9723E04CC1000F390F /* ProfileController.swift */; };
+		7FB1366123E301AE00B82144 /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1366023E301AE00B82144 /* ChangePasswordController.swift */; };
 		7FB574CA23DF01F400BC6DE2 /* tableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB574C923DF01F400BC6DE2 /* tableCell.swift */; };
 		7FB6B57623D9C4F80021D932 /* StatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6B57523D9C4F80021D932 /* StatsController.swift */; };
 		7FB6B57823D9C5640021D932 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6B57723D9C5640021D932 /* MapController.swift */; };
@@ -38,6 +39,7 @@
 		7F24134023D05EBF00B5F10F /* RecoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverController.swift; sourceTree = "<group>"; };
 		7F24134223D0632900B5F10F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7F754B9723E04CC1000F390F /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		7FB1366023E301AE00B82144 /* ChangePasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
 		7FB574C923DF01F400BC6DE2 /* tableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableCell.swift; sourceTree = "<group>"; };
 		7FB6B57523D9C4F80021D932 /* StatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsController.swift; sourceTree = "<group>"; };
 		7FB6B57723D9C5640021D932 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				7F24132E23D057AD00B5F10F /* LoginController.swift */,
 				7F754B9723E04CC1000F390F /* ProfileController.swift */,
 				7F24133023D057AD00B5F10F /* Main.storyboard */,
+				7FB1366023E301AE00B82144 /* ChangePasswordController.swift */,
 				7FB574C923DF01F400BC6DE2 /* tableCell.swift */,
 				7F24134223D0632900B5F10F /* User.swift */,
 				7F24134023D05EBF00B5F10F /* RecoverController.swift */,
@@ -232,6 +235,7 @@
 			files = (
 				7FB6B57A23D9C5A60021D932 /* RestrictController.swift in Sources */,
 				7FB6B57823D9C5640021D932 /* MapController.swift in Sources */,
+				7FB1366123E301AE00B82144 /* ChangePasswordController.swift in Sources */,
 				7F24134123D05EBF00B5F10F /* RecoverController.swift in Sources */,
 				7F24132F23D057AD00B5F10F /* LoginController.swift in Sources */,
 				7F24132D23D057AD00B5F10F /* AppDelegate.swift in Sources */,
