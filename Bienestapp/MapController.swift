@@ -12,6 +12,7 @@ import CoreLocation
 class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
     
     var jsonUso:[[String:Any]]?
+    var locations: [[Float]] = []
     
     let manager = CLLocationManager()
     @IBOutlet weak var mapa: MKMapView!
@@ -23,10 +24,7 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
         mapa.delegate = self
     }
     
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print(view.annotation?.title!)
-    }
+
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         print("didChangeAuthorization")
@@ -34,21 +32,30 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        pin(localizacion: locations.first!)
+        pin()
         //indicaciones(localizacion: locations.first!)
     }
     
-    func pin(localizacion: CLLocation) {
+    func pin() {
         let localizacion = CLLocationCoordinate2DMake(40, -4)
         let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
         let region = MKCoordinateRegion(center: localizacion, span: span)
         mapa.setRegion(region, animated: true)
         
         let anotacion = MKPointAnnotation()
-        anotacion.coordinate = localizacion
-        anotacion.title = "Sitio"
-        anotacion.subtitle = "Maravilloso"
-        mapa.addAnnotation(anotacion)
+        print(locations)
+        for location in locations {
+            anotacion.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(location[0]), longitude: CLLocationDegrees(location[1]))
+            anotacion.title = "Sitio"
+            anotacion.subtitle = "Maravilloso"
+            
+            print(anotacion.title!)
+            mapa.addAnnotation(anotacion)
+        }  
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print(view.annotation?.title!)
     }
     
     func getUsages() {
@@ -60,7 +67,17 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
             print(response.response!.statusCode)
             if response.response!.statusCode == 201 {
                 self.jsonUso = response.result.value as! [[String: Any]]
-                
+                for i in self.jsonUso! {
+                    let localizacion = i["location"]! as! String
+                    var locationString = localizacion.split(separator: ",")
+                    let locationFloat = [Float(locationString[0]),Float(locationString[1])]
+                    self.locations.append (locationFloat as! [Float])
+                    
+                    
+                    //print(locations[0])
+                }
+                self.pin()
+               
             } else {
                 let alert1 = UIAlertAction(title:"Cerrar", style: UIAlertAction.Style.default) {
                     (error) in

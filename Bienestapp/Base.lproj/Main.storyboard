@@ -309,7 +309,7 @@
             </objects>
             <point key="canvasLocation" x="3669.5652173913045" y="-877.23214285714278"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="5zY-C7-0jb">
             <objects>
                 <tableViewController id="Bdf-Ud-AqD" customClass="AppsController" customModule="Bienestapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -364,6 +364,7 @@
                                     <outlet property="NameText" destination="yYS-rZ-GUT" id="XY7-kx-p8M"/>
                                     <outlet property="TimeText" destination="wKR-Ym-OVX" id="Bjf-km-l88"/>
                                     <outlet property="imageApp" destination="3Zy-0c-VR3" id="eQT-UV-YTd"/>
+                                    <segue destination="wUX-eY-oUt" kind="show" id="Pwr-Zu-iWq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -372,11 +373,78 @@
                             <outlet property="delegate" destination="Bdf-Ud-AqD" id="wca-Dr-0Dn"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="internet (3)" selectedImage="internet (3)" id="0mb-vy-XLo"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="internet (3)" selectedImage="internet (3)" id="0mb-vy-XLo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDe-B5-fLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3882.608695652174" y="-186.16071428571428"/>
+        </scene>
+        <!--Show App Controller-->
+        <scene sceneID="08v-lV-IzM">
+            <objects>
+                <viewController id="wUX-eY-oUt" customClass="ShowAppController" customModule="Bienestapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4MH-zx-wlh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OLA-43-Rhe">
+                                <rect key="frame" x="20" y="68" width="111" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tL4-8Z-Sqh">
+                                <rect key="frame" x="168" y="92" width="90" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eyi-BG-Lwj">
+                                <rect key="frame" x="0.0" y="197" width="414" height="685"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celda1" rowHeight="106" id="ka5-hU-VUA" customClass="AppCelda" customModule="Bienestapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="106"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ka5-hU-VUA" id="zXh-cz-j1c">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCE-0B-chV">
+                                                    <rect key="frame" x="20" y="33" width="90" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KP-tW-SJQ">
+                                                    <rect key="frame" x="224" y="33" width="90" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fecha" destination="mCE-0B-chV" id="ppo-LM-Pvu"/>
+                                            <outlet property="tiempo" destination="1KP-tW-SJQ" id="GMR-7H-P1M"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tmT-sg-jLe"/>
+                    </view>
+                    <connections>
+                        <outlet property="NombreApp" destination="tL4-8Z-Sqh" id="MgF-uw-G8S"/>
+                        <outlet property="imageApp" destination="OLA-43-Rhe" id="l9W-LG-cn5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egB-Sk-nPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4711.594202898551" y="-186.16071428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Uab-29-8ZG">

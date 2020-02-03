@@ -23,6 +23,8 @@
 		7FB6B57823D9C5640021D932 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6B57723D9C5640021D932 /* MapController.swift */; };
 		7FB6B57A23D9C5A60021D932 /* RestrictController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6B57923D9C5A60021D932 /* RestrictController.swift */; };
 		7FD206CB23D5AFC10026D059 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD206CA23D5AFC10026D059 /* AppsController.swift */; };
+		7FE8190323E81F4700B32CA7 /* ShowAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE8190223E81F4700B32CA7 /* ShowAppController.swift */; };
+		7FE8190523E82CE600B32CA7 /* AppCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE8190423E82CE600B32CA7 /* AppCelda.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		7FB6B57723D9C5640021D932 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		7FB6B57923D9C5A60021D932 /* RestrictController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestrictController.swift; sourceTree = "<group>"; };
 		7FD206CA23D5AFC10026D059 /* AppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
+		7FE8190223E81F4700B32CA7 /* ShowAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAppController.swift; sourceTree = "<group>"; };
+		7FE8190423E82CE600B32CA7 /* AppCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCelda.swift; sourceTree = "<group>"; };
 		D2206B1C8855E9B45E2180D1 /* Pods-Bienestapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bienestapp.debug.xcconfig"; path = "Target Support Files/Pods-Bienestapp/Pods-Bienestapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,8 @@
 				7F24132E23D057AD00B5F10F /* LoginController.swift */,
 				7F754B9723E04CC1000F390F /* ProfileController.swift */,
 				7F24133023D057AD00B5F10F /* Main.storyboard */,
+				7FE8190423E82CE600B32CA7 /* AppCelda.swift */,
+				7FE8190223E81F4700B32CA7 /* ShowAppController.swift */,
 				7FB1366023E301AE00B82144 /* ChangePasswordController.swift */,
 				7FB574C923DF01F400BC6DE2 /* tableCell.swift */,
 				7F24134223D0632900B5F10F /* User.swift */,
@@ -239,10 +245,12 @@
 				7F24134123D05EBF00B5F10F /* RecoverController.swift in Sources */,
 				7F24132F23D057AD00B5F10F /* LoginController.swift in Sources */,
 				7F24132D23D057AD00B5F10F /* AppDelegate.swift in Sources */,
+				7FE8190323E81F4700B32CA7 /* ShowAppController.swift in Sources */,
 				7F24134323D0632900B5F10F /* User.swift in Sources */,
 				7FB6B57623D9C4F80021D932 /* StatsController.swift in Sources */,
 				7F754B9823E04CC1000F390F /* ProfileController.swift in Sources */,
 				7F24133F23D0586400B5F10F /* RegisterController.swift in Sources */,
+				7FE8190523E82CE600B32CA7 /* AppCelda.swift in Sources */,
 				7FB574CA23DF01F400BC6DE2 /* tableCell.swift in Sources */,
 				7FD206CB23D5AFC10026D059 /* AppsController.swift in Sources */,
 			);
