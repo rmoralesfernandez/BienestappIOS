@@ -10,7 +10,7 @@ import Alamofire
 import UIKit
 import AlamofireImage
 
-var app_id: Int = 0
+var apps_id: Int = 0
 
 class AppsController: UITableViewController {
     
@@ -40,7 +40,6 @@ class AppsController: UITableViewController {
             let url = URL(string: json![indexPath.row]["icon"] as! String)
             cell.imageApp.af_setImage(withURL: url!)
             cell.NameText.text = (json![indexPath.row]["name"]! as! String)
-            app_id = self.json![indexPath.row]["id"]! as! Int
         }
         
         if jsonUso != nil {
@@ -48,6 +47,11 @@ class AppsController: UITableViewController {
         }
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAt indexPath: NSIndexPath) {
+        apps_id = json![indexPath.row]["id"]! as! Int
+        print(apps_id)
     }
     
     func getApps() {

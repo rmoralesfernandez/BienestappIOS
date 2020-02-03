@@ -9,6 +9,7 @@ import Alamofire
 import AlamofireImage
 import UIKit
 
+
 class ShowAppController: UIViewController {
     
     var json: [String:Any]??
@@ -24,6 +25,8 @@ class ShowAppController: UIViewController {
         getApps()
         // Do any additional setup after loading the view.
     }
+    
+    
     
     
     
@@ -45,6 +48,7 @@ class ShowAppController: UIViewController {
         
         return cell
     }
+    
     
     func getApps() {
         let url = URL(string: "http://localhost:8888/Rick/BienestappRick/public/index.php/api/mostrar")
