@@ -10,7 +10,6 @@ import Alamofire
 import UIKit
 import AlamofireImage
 
-var apps_id: Int = 0
 
 class AppsController: UITableViewController {
     
@@ -18,6 +17,7 @@ class AppsController: UITableViewController {
     var jsonUso:[[String:Any]]?
     
     var numberJson = 0
+    var url = URL(string: "")
     override func viewWillAppear(_ animated: Bool) {
         
         getApps()
@@ -37,21 +37,34 @@ class AppsController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! tableCell
         
         if json != nil {
-            let url = URL(string: json![indexPath.row]["icon"] as! String)
+            url = URL(string: json![indexPath.row]["icon"] as! String)
             cell.imageApp.af_setImage(withURL: url!)
             cell.NameText.text = (json![indexPath.row]["name"]! as! String)
         }
         
         if jsonUso != nil {
             cell.TimeText.text = (jsonUso![indexPath.row]["totalTime"]! as! String)
+            cell.dateText.text = (jsonUso![indexPath.row]["day"]! as! String)
+            cell.dateText.isHidden = true
         }
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAt indexPath: NSIndexPath) {
-        apps_id = json![indexPath.row]["id"]! as! Int
-        print(apps_id)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let netScreen = segue.destination as! ShowAppController
+        let cell = sender as! tableCell
+        let nombre = cell.NameText.text!
+        let imagenn = cell.imageApp.image!
+        let date = cell.dateText.text!
+        let time = cell.TimeText.text!
+        netScreen.date = date
+        netScreen.time = time
+        netScreen.nombre = nombre
+        netScreen.imagen = imagenn
+        //print(imagenn)
+        //print("Estefaniaa",netScreen.NombreApp!)
+        
     }
     
     func getApps() {

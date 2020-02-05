@@ -12,4 +12,5 @@ class tableCell: UITableViewCell {
     @IBOutlet weak var imageApp: UIImageView!
     @IBOutlet weak var NameText: UILabel!
     @IBOutlet weak var TimeText: UILabel!
+    @IBOutlet weak var dateText: UILabel!
 }
