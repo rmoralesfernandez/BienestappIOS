@@ -59,7 +59,7 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
     }
     
     func getUsages() {
-        let url = URL(string: "http://localhost:8888/Rick/BienestappRick/public/index.php/api/mostrarUso")
+        let url = URL(string: "http://localhost:8888/Rick/BienestappRick/public/index.php/api/mostrarLocation")
         
         let header = ["Authentication": token]
         
