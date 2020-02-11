@@ -10,11 +10,13 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class StatsController: UITableViewController {
+class StatsController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var json: [[String:Any]]?
     var jsonUso:[[String:Any]]?
+    var time: [String ] =  ["day", "week", "month"]
     
+    @IBOutlet weak var SelectTime: UIPickerView!
     var numberJson = 0
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,8 +27,22 @@ class StatsController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
+        self.SelectTime.delegate = self
+        self.SelectTime.dataSource = self
     }
     
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return time.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String {
+        return time[row]
+    }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

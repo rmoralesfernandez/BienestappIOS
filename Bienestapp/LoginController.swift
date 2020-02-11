@@ -11,6 +11,7 @@ var token: String = ""
 
 class LoginController: UIViewController {
 
+    @IBOutlet weak var camposvacios: UILabel!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     override func viewDidLoad() {
@@ -20,7 +21,7 @@ class LoginController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         if(emailTF.text!.isEmpty && passwordTF.text!.isEmpty){
-            print("siuuuu")
+            camposvacios.isHidden = false
             
         }else{
             print("buuuuu")

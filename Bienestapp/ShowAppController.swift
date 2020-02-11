@@ -26,8 +26,8 @@ class ShowAppController: UIViewController {
         super.viewDidLoad()
         NombreApp.text! = nombre
         imageApp.image = imagen
-        dateApp.text! = date
-        timeApp.text! = time
+        dateApp.text! = "Fecha: " + date
+        timeApp.text! = "Tiempo diario: " + time
     }
     
     @IBAction func atras(_ sender: Any) {
